@@ -24,7 +24,6 @@ EXPORT definicao_chicago_tarefa3 := MODULE
 		INTEGER Longitude;
 		STRING Location;
 	END;
-EXPORT File := DATASET('~class::intro::mlsc::crimes_-_2001_to_present', Layout, CSV);
+EXPORT File := DATASET('~intro::mlsc::crimes_-_2001_to_present.csv', Layout, CSV(heading(1)));
 END;
 	
-		
