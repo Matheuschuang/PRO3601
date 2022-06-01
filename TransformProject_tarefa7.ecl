@@ -1,7 +1,9 @@
 ﻿IMPORT $;
 
-EXPORT definicao_chicago_otimizado_tarefa5 := MODULE
-	EXPORT Layout := RECORD
+Crimes := $.definicao_chicago_otimizado_tarefa5;
+
+Layout2 := RECORD
+	UNSIGNED recid;
 	UNSIGNED4 id;
 	STRING9 case_number;
 	STRING22 date;
@@ -24,6 +26,10 @@ EXPORT definicao_chicago_otimizado_tarefa5 := MODULE
 	REAL8 latitude;
 	REAL8 longitude;
 	STRING29 location;
-	END;
-EXPORT File := DATASET('~class::intro::mlsc::crimes_-_2001_to_present.csv', Layout, CSV(heading(1)));
 END;
+
+Layout2 AddRecordDataIdentification(Layout Le, UNSIGNED cnt):= TRANSFORM
+	SELF.recid := cnt;
+	SELF := Le;
+END;
+
