@@ -1,0 +1,1 @@
+﻿EXPORT tarefa8_normalizado := 'todo';
